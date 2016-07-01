@@ -8,13 +8,13 @@
         .state('tab', {
           abstract: true,
           url: '/tabs',
-          templateUrl: 'templates/tabs.html'
+          templateUrl: 'tabs/tabs.html'
         })
         .state('tab.cars', {
           url: '/cars',
           views: {
             'cars': {
-              templateUrl: 'templates/cars.html'
+              templateUrl: 'tabs/cars/cars.html'
             }
           }
         })
@@ -22,7 +22,7 @@
           url: '/cars/:id',
           views: {
             'cars': {
-              templateUrl: 'templates/cars.edit.html'
+              templateUrl: 'tabs/cars/edit/cars.edit.html'
             }
           }
         })
@@ -30,7 +30,7 @@
           url: '/add-car',
           views: {
             'cars-add': {
-              templateUrl: 'templates/cars.add.html'
+              templateUrl: 'tabs/add-car/add-car.html'
             }
           }
         })
