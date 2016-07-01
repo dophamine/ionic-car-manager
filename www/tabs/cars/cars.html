@@ -1,16 +1,7 @@
 <ion-view view-title="Cars">
-  <div class="bar bar-subheader">
-    <div class="button-bar">
-      <a class="button icon-right ion-ios-arrow-down button-calm" ng-click="vm.filterKey = 'vin'">VIN</a>
-      <a class="button icon-right ion-ios-arrow-down button-calm" ng-click="vm.filterKey ='make'">Make</a>
-      <a class="button icon-right ion-ios-arrow-down button-calm" ng-click="vm.filterKey = 'model'">Model</a>
-      <a class="button icon-right ion-ios-arrow-down button-calm" ng-click="vm.filterKey = 'year'">Year</a>
-    </div>
-  </div>  
-  <ion-content class="has-subheader">
-    
+  <ion-content >
     <ion-list>
-      <ion-item class="card padding" ng-repeat="(id, car) in vm.cars | orderBy: {{car(vm.filterKey)}}" href="#/tabs/cars/{{id}}">
+      <ion-item class="card" ng-repeat="(id, car) in vm.cars" href="#/tabs/cars/{{id}}">
         <p class="item">VIN: {{ car.vin | slice }}</p>
         <p class="item">Make: {{ car.make }}</p>
         <p class="item">Model: {{ car.model }}</p>

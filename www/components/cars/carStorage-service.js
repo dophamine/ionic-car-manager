@@ -2,6 +2,7 @@
 (function () {
 
   angular.module('carman')
+  //wrap $localStorage for for personal purposes 
     .factory('carStorage', ['$localStorage',
       function ($localStorage) {
 
@@ -14,6 +15,7 @@
         carStorage.saveCar = saveCar;
         carStorage.cars = cars;
 
+        //proccess response data
         function saveCar(vin, data) {
           if (cars[vin]) {
             return;

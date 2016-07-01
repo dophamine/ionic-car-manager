@@ -14,13 +14,13 @@
               $state.go('^.cars-edit', {
                 id: vin
               });
-              //clearing history when update
+              //disable Back tab for prevent return back
               $ionicHistory.nextViewOptions({
                 disableBack: true
               });
             },
             function (err) {
-
+              //error haddler
             }
           );
         }

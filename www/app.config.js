@@ -3,13 +3,14 @@
 
   angular.module('carman')
     .config(function ($stateProvider, $urlRouterProvider) {
-
+      //routing
       $stateProvider
         .state('tab', {
           abstract: true,
           url: '/tabs',
           templateUrl: 'tabs/tabs.html'
         })
+        //cars list
         .state('tab.cars', {
           url: '/cars',
           views: {
@@ -19,15 +20,17 @@
             }
           }
         })
+        //car editing view
         .state('tab.cars-edit', {
           url: '/cars/:id',
           views: {
             'cars': {
               templateUrl: 'tabs/cars/edit/cars.edit.html',
-              controller: 'CarEditController as vm'
+              controller: 'CarsEditController as vm'
             }
           }
         })
+        //view for new car
         .state('tab.cars-add', {
           url: '/add-car',
           views: {
@@ -37,7 +40,7 @@
             }
           }
         })
-
+      //fallback
       $urlRouterProvider.otherwise('/tabs/cars');
 
     });
