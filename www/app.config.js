@@ -14,7 +14,8 @@
           url: '/cars',
           views: {
             'cars': {
-              templateUrl: 'tabs/cars/cars.html'
+              templateUrl: 'tabs/cars/cars.html',
+              controller: 'CarsController as vm'
             }
           }
         })
@@ -22,7 +23,8 @@
           url: '/cars/:id',
           views: {
             'cars': {
-              templateUrl: 'tabs/cars/edit/cars.edit.html'
+              templateUrl: 'tabs/cars/edit/cars.edit.html',
+              controller: 'CarEditController as vm'
             }
           }
         })
@@ -30,7 +32,8 @@
           url: '/add-car',
           views: {
             'cars-add': {
-              templateUrl: 'tabs/add-car/add-car.html'
+              templateUrl: 'tabs/add-car/add-car.html',
+              controller: 'AddCarController as vm'
             }
           }
         })

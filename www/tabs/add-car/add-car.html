@@ -1,9 +1,9 @@
 <ion-view view-title="Add new car">
   <ion-content>
-    <form class="card">
-      <label  class="item item-input item-floating-label">
-        <span class="input-label">VIN</span>
-        <input type="text" placeholder="VIN">
+    <form class="card" role="form" name="formvin" id="form-vin" ng-submit="vm.getCar(vm.vin)">
+      <label for="vin" class="item item-input item-floating-label">
+        <span class="input-label">VIN (17 chars)</span>
+        <input type="text" name="vin" id="vin" required minlength="17" maxlength="17" placeholder="VIN" ng-model="vm.vin" style='text-transform:uppercase'>
       </label>
       <br>
       <br>

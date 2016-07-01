@@ -1,18 +1,46 @@
 <ion-view view-title="Edit">
   <ion-content>
+  <form name="editCar" id="editCar" ng-submit="vm.saveCar(vm.car)">
     <div class="list">
-	  <label class="item item-input item-floating-label">
-	    <span class="input-label">VIN</span>
-	    <input type="text" readonly= placeholder="First Name">
-	  </label>
-	  <label class="item item-input item-floating-label">
-	    <span class="input-label">Last Name</span>
-	    <input type="text" placeholder="Last Name">
-	  </label>
-	  <label class="item item-input item-floating-label">
-	    <span class="input-label">Email</span>
-	    <input type="text" placeholder="Email">
-	  </label>
-	</div>
+    <label class="item item-input item-stacked-label">
+      <span class="">VIN:</span>
+      <input type="text" name="vin" ng-model="vm.car.vin" readonly placeholder="VIN">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Make:</span>
+      <input type="text" name="make" ng-model="vm.car.make" placeholder="Make">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Model:</span>
+      <input type="text" name="model" ng-model="vm.car.model" placeholder="Model">
+    </label>
+    
+    <div class="row">
+      <label class="item item-input col col-50">
+        <span class="input-label">Year:</span>
+        <input type="text" name="year" ng-model="vm.car.year" placeholder="Year">
+      </label>
+      <label class="item item-select col col-50">
+        <select ng-model="vm.car.year" ng-options="year for year in vm.years"></select>
+      </label>
+    </div>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Trim:</span>
+      <input type="text" name="trim" ng-model="vm.car.trim" placeholder="Trim" >
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Body Type:</span>
+      <input type="text" name="bodyType" ng-model="vm.car.bodyType" placeholder="Body Type" >
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Gross Weight</span>
+      <input type="text" name="grossWeight" ng-model="vm.car.grossWeight" placeholder="Gross Weight">
+    </label>
+    <br>
+    <button type="submit" class="button button-balanced button-full">
+      Update
+    </button>
+  </div>
+  </form>
   </ion-content>
 </ion-view>
