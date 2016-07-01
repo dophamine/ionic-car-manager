@@ -1,7 +1,7 @@
 ;
 (function () {
   
-  angular.module('carman', ['ionic'])
+  angular.module('carman', ['ionic', 'ngStorage'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {

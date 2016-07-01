@@ -27,7 +27,7 @@
           }
         })
         .state('tab.cars-add', {
-          url: '/cars-add',
+          url: '/add-car',
           views: {
             'cars-add': {
               templateUrl: 'templates/cars.add.html'
